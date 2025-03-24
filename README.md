@@ -1,6 +1,8 @@
 Fichero MD 
 
-Tema de ejemplo
-: definición
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
 
 
