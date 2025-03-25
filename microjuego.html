@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Víctor Casas</title>
+		<title>Microjuego</title>
 		
 		<link rel="stylesheet" href="estilo.css" />
+		
+		<script>
+		
+		let numero = Math.floor(Math.random()*100)+1;
+		
+		let contador = 0;
+
+		
+		function compara_numero () 
+		{	
+		
+			contador++;
+			
+			let submit_input = document.getElementById("field-submit");
+			
+			submit_input.value = "¡Adivina! ("+contador+")";
+			
+			let my_num_input = document.getElementById("campo-numero");
+						
+			let my_num = my_num_input.value;
+			
+			let resultado = document.getElementById("resultado");
+			
+			if (my_num == numero) {
+				resultado.innerHTML = "<marquee><strong class=\"you-win\">¡Has adivinado, era "+my_num+"! Y te han hecho falta "+contador+" intentos</strong></marquee>";
+				//resultado.style.color = "#00ff00";
+			}
+			else if (my_num < numero) {
+				resultado.innerHTML = "<em class=\"error\">Incorrecto! El número que buscas es <strong>mayor</strong> que "+my_num+"</em>...";
+				//resultado.style.color = "#ff0000";
+			}
+			else if (my_num > numero) {
+				resultado.innerHTML = "<em class=\"error\">Incorrecto! El número que buscas es <strong>menor</strong> que "+my_num+"</em>...";
+				//resultado.style.color = "#ff0000";
+			}
+			
+			my_num_input.value = "";
+			
+			my_num_input.focus();
+		
+		}
+		</script>
 	</head>
 	
 	
 	<body>
 		<header>
 			<nav>
-				<h1>Víctor Casas</h1>
-				<p>Alumno de <strong>ENTI-CFGS <strong><em>ASIX-Ciberseguridad</em></strong></p>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="cv.html">Currículum</a></li>
-					<li><a href="hobbies.html">Hobbies</a></li>
-					<li><a href="contact.html">Contacto</a></li>
-					<li><a href="microjuego.html">Microjuego</a></li>
-				</ul>
+				<h1>Microjuego</h1>
+				<nav class="navegacion-web">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="cv.html">Currículum</a></li>
+						<li><a href="hobbies.html">Hobbies</a></li>
+						<li><a href="contact.html">Contacto</a></li>
+						<li><a href="microjuego.html">Microjuego</a></li>
+					</ul>
+				</nav>
 			</nav>
 		</header>
 		
 		<main>
-			<marquee>¡Gracias Microsoft!</marquee>
-			<h2>Título de la sección</h2>
-			<blockquote>
-				<p>Un gran poder, conlleva una gran responsabilidad</p>
-				<p><em>Darth Vader</em></p>
-			</blockquote>
-		
-			<p>Pero otro sabio también dijo:
-			<q>Al pan pan y al vino como locos</q></p>
+			<form>
 			
-			<p><img src="1_8Cvj6VOiVCElC3oRSTkeOQ.jpg" /></p>
-		
-			<h3>Título de la sub-sección 1</h3>
-			<p>Contenido <strong>interesante</strong></p>
-			<p>Contenido <em>interesante</em></p>
-			<p>Contenido <strong><em>interesante</em></strong></p>
-			<!-- 
-			comentario
-			-->
-			<ol>
-				<li>Elemento de <a href="https://enti.cat"><strong>lista</strong></a></li>
-				<li>Elemento de lista</li>
-				<li>Elemento de lista</li>
-			</ol>
-		
-			<h3>Título de la sub-sección 2</h3>
-			<p>Conetnido interesante</p>
-
-		
-			<h2>Otra sección</h2>
-			<h3>Otra pero esta está mal</h3>
-			<h4>Otra pero esta está mal</h4>
-			<h5>Otra pero esta está mal</h5>
-			<h6>Otra pero esta está mal</h6>
+				<h2 class="titulo-juego adivina-numero">Adivina el número</h2>
+				<p>Adivina el número que se ha generado, es un número entre el <strong>1</strong> y el <strong>100</strong>.</p>
+				
+				<p id="resultado">¡Prueba suerte!</p>
+				
+				<p>Tu número: <input type="number" name="numero" min="0" max="100" id="campo-numero" /></p>
+				
+				<p><input type="button" id="field-submit" value="¡Adivina!" onClick="compara_numero();" /></p>
+				
+			</form>
 		</main>
 		
 		<footer>
