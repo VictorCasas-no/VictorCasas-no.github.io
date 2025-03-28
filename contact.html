@@ -4,6 +4,8 @@
 		<title>Víctor Casas</title>
 		
 		<link rel="stylesheet" href="estilo.css" />
+		
+		<script type="text/javascript" src="contact.js"></script>
 	</head>
 	
 	
@@ -25,17 +27,17 @@
 			
 			<h2>Contact</h2>
 			
-			<form>
+			<form id="contact-form">
 				<p><label for="campo-nombre">Nombre:</label><input type="text" name="nombre" /></p>
-				<p>Password: <input type="password" name="nombre" /></p>
-				<p>Nacimiento: <input type="date" name="nacimiento" /></p>
-				<p>Color: <input type="color" name="nombre" /></p>
-				<p>Edad: <input type="number" name="edad" value="18" min="1" max="120"/></p>
+				<p><label for="campo-password">Password: <input type="password" name="password" /></p>
+				<p><label for="campo-nacimiento">Nacimiento: <input type="date" name="nacimiento" /></p>
+				<p><label for="campo-color">Color: <input type="color" name="nombre" /></p>
+				<p><label for="campo-edad">Edad: <input type="number" name="edad" value="18" min="1" max="120"/></p>
 				
 				<p><input type="checkbox" name="subscribe" id="subscribe" />
 				<label for="subscribe">Al no aceptar ésta cajetilla de texto te subscribes de por vida a mi mailing y aceptas donarme 1000€ por la cara</label></p>
 				
-				<p><input type="submit" /></p>
+				<p><input type="submit" id="form-submit" /></p>
 				
 			</form>
 			

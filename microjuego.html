@@ -5,47 +5,7 @@
 		
 		<link rel="stylesheet" href="estilo.css" />
 		
-		<script>
-		
-		let numero = Math.floor(Math.random()*100)+1;
-		
-		let contador = 0;
-
-		
-		function compara_numero () 
-		{	
-		
-			contador++;
-			
-			let submit_input = document.getElementById("field-submit");
-			
-			submit_input.value = "¡Adivina! ("+contador+")";
-			
-			let my_num_input = document.getElementById("campo-numero");
-						
-			let my_num = my_num_input.value;
-			
-			let resultado = document.getElementById("resultado");
-			
-			if (my_num == numero) {
-				resultado.innerHTML = "<marquee><strong class=\"you-win\">¡Has adivinado, era "+my_num+"! Y te han hecho falta "+contador+" intentos</strong></marquee>";
-				//resultado.style.color = "#00ff00";
-			}
-			else if (my_num < numero) {
-				resultado.innerHTML = "<em class=\"error\">Incorrecto! El número que buscas es <strong>mayor</strong> que "+my_num+"</em>...";
-				//resultado.style.color = "#ff0000";
-			}
-			else if (my_num > numero) {
-				resultado.innerHTML = "<em class=\"error\">Incorrecto! El número que buscas es <strong>menor</strong> que "+my_num+"</em>...";
-				//resultado.style.color = "#ff0000";
-			}
-			
-			my_num_input.value = "";
-			
-			my_num_input.focus();
-		
-		}
-		</script>
+		<script type="text/javascript" src="microjuego.js"></script>
 	</head>
 	
 	
