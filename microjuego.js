@@ -62,7 +62,7 @@ function compara_numero ()
 			
 	if (my_num == numero) {
 		resultado.innerHTML = "<marquee><strong class=\"you-win\">¡Has adivinado, era "+my_num+"! Y te han hecho falta "+contador+" intentos</strong></marquee>";
-		//resultado.style.borderColor = "#00ff00";
+		resultado.style.color = "#00ff00";
 	}
 	else if (my_num < numero) {
 		let msg = "<em class=\"error\">Incorrecto! El número que buscas es <strong>mayor</strong> que "+my_num+"</em>...";

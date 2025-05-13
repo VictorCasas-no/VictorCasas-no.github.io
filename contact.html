@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<title>Víctor Casas</title>
-		
-		<link rel="stylesheet" href="estilo.css" />
-		
-		<script type="text/javascript" src="contact.js"></script>
-	</head>
-	
-	
-	<body>
-		<header>
-			<nav>
-				<h1>Víctor Casas</h1>
-				<p>Alumno de <strong>ENTI-CFGS <strong><em>ASIX-Ciberseguridad</em></strong></p>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="cv.html">Currículum</a></li>
-					<li><a href="hobbies.html">Hobbies</a></li>
-					<li><a href="contact.html">Contacto</a></li>
-				</ul>
-			</nav>
-		</header>
-		
-		<main>
-			
-			<h2>Contact</h2>
-			
-			<form id="contact-form">
-				<p><label for="campo-nombre">Nombre:</label><input type="text" name="nombre" /></p>
-				<p><label for="campo-password">Password: <input type="password" name="password" /></p>
-				<p><label for="campo-nacimiento">Nacimiento: <input type="date" name="nacimiento" /></p>
-				<p><label for="campo-color">Color: <input type="color" name="nombre" /></p>
-				<p><label for="campo-edad">Edad: <input type="number" name="edad" value="18" min="1" max="120"/></p>
-				
-				<p><input type="checkbox" name="subscribe" id="subscribe" />
-				<label for="subscribe">Al no aceptar ésta cajetilla de texto te subscribes de por vida a mi mailing y aceptas donarme 1000€ por la cara</label></p>
-				
-				<p><input type="submit" id="form-submit" /></p>
-				
-			</form>
-			
-		</main>
-		
-		<footer>
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="cv.html">Currículum</a></li>
-					<li><a href="hobbies.html">Hobbies</a></li>
-					<li><a href="contact.html">Contacto</a></li>
-				</ul>
-			</nav>
-			
-			<p>&copy; Víctor Casas</p>
-			
-		
-		</footer>
-	</body>
+  <head>
+    <title>Contacto - Víctor Casas</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1>Víctor Casas</h1>
+        <nav class="navegacion-web">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">Currículum</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="microjuego.html">Microjuego</a></li>
+          </ul>
+        </nav>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Contacto</h2>
+      <p>Aquí abajo me puedes dejar cualquier comentario que quieras hacer...</p>
+
+      <form>
+        <p>
+          <label for="nombre">Nombre:</label><br />
+          <input type="text" name="nombre" id="nombre" required />
+        </p>
+
+        <p>
+          <label for="email">Correo electrónico:</label><br />
+          <input type="email" name="email" id="email" required />
+        </p>
+
+        <p>
+          <label for="mensaje">Mensaje:</label><br />
+          <textarea name="mensaje" id="mensaje" rows="5" cols="40" required></textarea>
+        </p>
+
+        <p>
+          <input type="checkbox" name="subscribe" id="subscribe" />
+          <label for="subscribe">Al aceptar esta cajetilla de texto confirmas que no eres un robot:</label>
+        </p>
+
+        <p><input type="submit" value="Enviar mensaje" /></p>
+      </form>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cv.html">Currículum</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="microjuego.html">Microjuego</a></li>
+        </ul>
+      </nav>
+      <p>&copy; Víctor Casas</p>
+    </footer>
+  </body>
 </html>
+
